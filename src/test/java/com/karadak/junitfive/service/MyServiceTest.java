@@ -27,7 +27,7 @@ public class MyServiceTest {
         assertFalse(VALID_MESSAGES.contains(message), "contains a valid message");
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name = "run #{index} with [{arguments}]")
     @ValueSource(strings = {"message 1", "message 2"})
     @DisplayName("correct messages")
     public void contains_message_Correct(String message) {
